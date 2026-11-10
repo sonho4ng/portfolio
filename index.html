@@ -25,15 +25,18 @@
           <h1><a href="#main-content">Minh N. Ta</a></h1>
           <p>PhD researcher in Natural Language Processing <span>·</span> <a href="https://mbzuai.ac.ae/" target="_blank" rel="noreferrer">▧ MBZUAI</a></p>
         </div>
-        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
       </div>
-      <nav class="menu" aria-label="Main navigation">
-        <a href="#about">About</a><a href="#research">Research</a><a href="#updates">Updates</a>
-        <a href="#misc">Miscellaneous</a><a href="#contact">Contact</a><a href="#cv">CV ↗</a>
-      </nav>
     </header>
+    <nav class="menu" aria-label="Main navigation">
+      <a href="#main-content">Home</a>
+      <a href="#research">Research</a>
+      <a href="#research">Projects</a>
+      <a href="#about">Experience</a>
+      <a href="#updates">Honors</a>
+      <a href="#contact">Service</a>
+      <a href="#misc">Miscellaneous</a>
+      <a href="#contact">Blog ↗</a>
+    </nav>
 
     <main id="main-content">
       <section id="about" class="intro section-grid">
@@ -61,26 +64,30 @@
 
       <section id="research" class="research section-grid">
         <div class="section-aside">
-          <div class="section-label">01 / Research focus</div>
-          <img class="section-photo" src="image/anh_dai_dien.jpg" alt="Portrait of Minh in a bookstore" />
+          <div class="section-marker" aria-hidden="true">
+            <strong>01</strong>
+            <span>Ideas<br />in motion</span>
+          </div>
         </div>
         <div class="research-content">
           <h2>AI that earns trust<br />and works for people.</h2>
           <p class="lead">My research interests center on trustworthy machine learning, human-centered AI, and their real-world applications.</p>
-          <div class="focus-list">
-            <article><span>01</span><div><h3>Trustworthy &amp; human-centered AI</h3><p>Machine-learning systems designed around reliability, human needs, and meaningful real-world applications.</p></div></article>
-            <article><span>02</span><div><h3>Decision-theoretic agentic LLMs</h3><p>Decision-theoretic approaches to memory management and personalized behavior in language-model agents.</p></div></article>
-            <article><span>03</span><div><h3>Conversational AI</h3><p>Clarification-seeking and long-horizon dialogue for systems that communicate and collaborate more effectively with people.</p></div></article>
-          </div>
+        </div>
+        <div class="focus-list">
+          <article><span>01</span><div><h3>Trustworthy &amp; human-centered AI</h3><p>Machine-learning systems designed around reliability, human needs, and meaningful real-world applications.</p></div></article>
+          <article><span>02</span><div><h3>Decision-theoretic agentic LLMs</h3><p>Decision-theoretic approaches to memory management and personalized behavior in language-model agents.</p></div></article>
+          <article><span>03</span><div><h3>Conversational AI</h3><p>Clarification-seeking and long-horizon dialogue for systems that communicate and collaborate more effectively with people.</p></div></article>
         </div>
       </section>
 
       <section id="updates" class="updates section-grid">
         <div class="section-aside">
-          <div class="section-label">02 / Now &amp; next</div>
-          <img class="section-photo" src="image/anh_dai_dien.jpg" alt="Portrait of Minh in a bookstore" />
+          <div class="section-marker section-marker-updates" aria-hidden="true">
+            <strong>02</strong>
+            <span><b>Now</b><em>&amp; next</em></span>
+          </div>
         </div>
-        <div>
+        <div class="updates-content">
           <h2>Recent updates</h2>
           <p class="subheading">Research visits, papers, and the occasional reason to celebrate.</p>
           <div class="timeline">
@@ -95,10 +102,6 @@
       </section>
 
       <section id="misc" class="misc section-grid">
-        <div class="section-aside">
-          <div class="section-label">03 / Away from research</div>
-          <img class="section-photo" src="image/anh_dai_dien.jpg" alt="Portrait of Minh in a bookstore" />
-        </div>
         <div class="misc-card">
           <h2>A small corner<br />for everything else.</h2>
           <p>I keep a page of useful resources related to AI/ML, some stories from home, and recommendations for friends planning a trip to Viet Nam.</p>
@@ -108,8 +111,10 @@
 
       <section id="contact" class="contact section-grid">
         <div class="section-aside">
-          <div class="section-label">04 / Let’s talk</div>
-          <img class="section-photo" src="image/anh_dai_dien.jpg" alt="Portrait of Minh in a bookstore" />
+          <div class="section-marker" aria-hidden="true">
+            <strong>04</strong>
+            <span>Let’s<br />talk</span>
+          </div>
         </div>
         <div class="contact-copy">
           <h2>Want to say hello?</h2>
@@ -124,6 +129,6 @@
       <a href="#main-content">Back to top ↑</a>
       <p>© 2026 Minh N. Ta. Built with care.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>
