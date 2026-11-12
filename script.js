@@ -30,3 +30,36 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
 
   revealSections.forEach((section) => revealObserver.observe(section));
 }
+
+const navigationLinks = [...document.querySelectorAll(".menu a")];
+const navigationTargets = new Set(
+  navigationLinks
+    .map((link) => link.getAttribute("href"))
+    .filter((target) => target && target.startsWith("#"))
+);
+const navigationSections = [...document.querySelectorAll("main > section[id]")].filter(
+  (section) => navigationTargets.has(`#${section.id}`)
+);
+
+if (navigationLinks.length && navigationSections.length) {
+  const setActiveNavigation = () => {
+    const marker = window.scrollY + 150;
+    let activeId = "main-content";
+
+    navigationSections.forEach((section) => {
+      if (section.offsetTop <= marker) activeId = section.id;
+    });
+
+    navigationLinks.forEach((link) => {
+      const target = link.getAttribute("href");
+      const isActive = target === `#${activeId}` || (activeId === "main-content" && target === "#main-content");
+      link.classList.toggle("active", isActive);
+      if (isActive) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
+  };
+
+  setActiveNavigation();
+  window.addEventListener("scroll", setActiveNavigation, { passive: true });
+  window.addEventListener("resize", setActiveNavigation);
+}
